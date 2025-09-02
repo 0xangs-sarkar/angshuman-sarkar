@@ -42,312 +42,495 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angshuman Sarkar - Marketing Leader</title>
+    <meta name="description" content="Angshuman Sarkar - Senior Marketing Leader with expertise in digital marketing, performance marketing, brand marketing, user growth, and P&L management in gaming, e-commerce, and FMCG sectors. Based in Bangalore, India.">
+    <meta name="keywords" content="senior marketing leader, digital marketing expert, performance marketing specialist, brand marketing strategist, marketing director, user acquisition expert, growth marketing, P&L management, gaming marketing, e-commerce marketing, FMCG marketing, marketing strategy, team leadership">
+    <meta property="og:title" content="Angshuman Sarkar - Senior Marketing Leader">
+    <meta property="og:description" content="Experienced marketing professional specializing in digital marketing, performance marketing, and user growth in gaming, e-commerce, and FMCG. Connect with Angshuman Sarkar on LinkedIn.">
+    <meta property="og:image" content="https://0xangs-sarkar.github.io/angshuman-sarkar/profile.jpg">
+    <meta property="og:url" content="https://0xangs-sarkar.github.io/angshuman-sarkar/">
+    <title>Angshuman Sarkar - Senior Marketing Leader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #f9fafb;
+            color: #1f2937;
+            line-height: 1.7;
+            scroll-behavior: smooth;
         }
         header {
-            background-color: #007bff;
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
             color: white;
-            padding: 20px;
+            padding: 50px 20px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        header h1 {
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 1;
+            loading: lazy;
+        }
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+        .profile-pic::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+            z-index: -1;
+        }
+        .header-text {
+            text-align: left;
+            max-width: 600px;
+        }
+        .header-text h1 {
             margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+        .header-text p {
+            margin: 8px 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .header-text a {
+            color: #93c5fd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .header-text a:hover {
+            color: #dbeafe;
+            text-decoration: underline;
         }
         nav {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
+            background-color: #111827;
+            padding: 12px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            transition: color 0.3s;
+            white-space: nowrap;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #3b82f6;
         }
         section {
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 900px;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 25px;
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         h2 {
-            border-bottom: 2px solid #007bff;
+            color: #1e40af;
+            border-bottom: 3px solid #3b82f6;
             padding-bottom: 10px;
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
         .experience-item {
             margin-bottom: 20px;
+            padding-bottom: 15px;
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
         }
-        .experience-item h3 {
-            margin: 0;
+        details {
+            padding: 10px;
+        }
+        details[open] {
+            background-color: #f9fafb;
+            border-color: #93c5fd;
+        }
+        summary {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #111827;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary:hover {
+            background-color: #eff6ff;
+        }
+        summary::marker, summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::after {
+            content: '▼';
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+        .date-location {
+            font-style: italic;
+            color: #4b5563;
+            font-size: 1em;
+            margin: 6px 0;
         }
         .experience-item p {
-            margin: 5px 0;
+            margin: 8px 0;
+            font-weight: 500;
+            color: #374151;
         }
         ul {
-            list-style-type: disc;
-            padding-left: 20px;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 1em;
+            color: #374151;
+            line-height: 1.5;
+        }
+        ul li::before {
+            content: '•';
+            color: #3b82f6;
+            font-size: 1.2em;
+            margin-right: 12px;
+            flex-shrink: 0;
+            padding-top: 2px;
+        }
+        h4 {
+            font-size: 1.2em;
+            color: #1f2937;
+            margin: 15px 0 8px;
+            font-weight: 600;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3b82f6;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .back-to-top:hover {
+            background-color: #1e40af;
         }
         footer {
-            background-color: #333;
-            color: white;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 15px;
+            background-color: #111827;
+            color: white;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-text {
+                text-align: center;
+            }
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+                margin: 0 auto 15px;
+            }
+            nav {
+                padding: 10px 15px;
+            }
+            nav a {
+                margin: 0 6px;
+                font-size: 0.85em;
+            }
+            section {
+                margin: 15px;
+                padding: 20px;
+            }
+            .header-text h1 {
+                font-size: 2em;
+            }
+            .header-text p {
+                font-size: 1em;
+            }
+            summary {
+                font-size: 1.2em;
+                padding: 6px;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            summary::after {
+                font-size: 0.7em;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            details[open] summary::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+            ul li::before {
+                font-size: 1.1em;
+                padding-top: 3px;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Angshuman Sarkar</h1>
-        <p>Date of Birth: 30-11-1989 | Email: angshumans15.iimk@gmail.com | LinkedIn: <a href="https://www.linkedin.com/in/angshuman-sarkar-50a46743/" style="color: white;">Profile</a></p>
+        <div class="header-content">
+            <img src="profile.jpg" alt="Angshuman Sarkar, Senior Marketing Leader" class="profile-pic" loading="lazy">
+            <div class="header-text">
+                <h1>Angshuman Sarkar</h1>
+                <p>Date of Birth: 30-11-1989 | Email: <a href="mailto:angshumans15.iimk@gmail.com">angshumans15.iimk@gmail.com</a> | LinkedIn: <a href="https://www.linkedin.com/in/angshuman-sarkar-50a46743/" target="_blank">Profile</a> | <a href="Angshuman Sarkar_Resume.pdf" download>Download Resume</a></p>
+            </div>
+        </div>
     </header>
 
     <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Professional Experience</a>
-        <a href="#education">Academic Profile</a>
-        <a href="#leadership">Leadership Positions</a>
-        <a href="#awards">Awards & Achievements</a>
+        <a href="#about" aria-label="Go to About section">About</a>
+        <a href="#experience" aria-label="Go to Professional Experience section">Professional Experience</a>
+        <a href="#academic" aria-label="Go to Academic Profile section">Academic Profile</a>
     </nav>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Seasoned marketing leader with 12+ years of experience in driving user growth, P&L management, and scaling B2C businesses in gaming, e-commerce, and FMCG sectors. Expertise in performance marketing, product marketing, and team leadership. Connect with me on <a href="https://www.linkedin.com/in/angshuman-sarkar-50a46743/">LinkedIn</a>.</p>
+        <p>Experienced <strong>senior marketing leader</strong> with over 12 years in <strong>digital marketing</strong>, <strong>performance marketing</strong>, and <strong>brand marketing</strong>, driving user acquisition, retention, and P&L management in gaming, e-commerce, and FMCG sectors. Skilled in <strong>marketing strategy</strong>, customer growth, and team leadership, consistently exceeding revenue targets. Connect with me on <a href="https://www.linkedin.com/in/angshuman-sarkar-50a46743/" target="_blank">LinkedIn</a>.</p>
     </section>
 
     <section id="experience">
         <h2>Professional Experience</h2>
-        
-        <div class="experience-item">
-            <h3>Director - Marketing, Play Games 24x7</h3>
-            <p>Jul’22 onwards | Bangalore</p>
-            <p>Business Head – PokerCircle & Wowzy</p>
+
+        <details class="experience-item">
+            <summary>Director - Marketing<br>Games24x7</summary>
+            <p class="date-location">Jul’22 – Present | Bangalore</p>
+            <p class="date-location">Business Head – PokerCircle & Wowzy</p>
             <h4>Roles & Responsibilities</h4>
             <ul>
-                <li>Manage the P&L of PokerCircle and Wowzy with ARR of 250+ Crores, lead a high performance team of 30 people</li>
-                <li>Responsible for User Growth - Acquisition, Retention and Reactivation for both Poker and Ludo businesses</li>
-                <li>Manage annual marketing budget of 200+ Crores across performance and brand campaigns for both businesses</li>
-                <li>Manage all Channels (SEO, Referrals, Organic, Google, Meta, DSPs, Prog., CTV, Partners, Influencers & Affiliates)</li>
-                <li>Manage Product Marketing leveraging Marketing Automation tools to improve Customer Lifetime Value-CLTV</li>
-                <li>Plan and execute the business strategy for both businesses to scale them within the unit economic guardrails</li>
-                <li>Responsible for hiring, grooming and nurturing the marketing and analytics teams for both the businesses</li>
-                <li>Responsible for building a culture of innovation that leads to insights and ideas coming from across the team</li>
-                <li>Optimise User funnel, CLTV and Cost, leveraging data analytics, Customer Lifecycle Marketing-CLM and Product</li>
-                <li>Planning and prioritisation of the product feature pipeline for both the apps with the business goals in mind</li>
-                <li>Responsible for optimising the user journey through experimentation to exceed the benchmark target metrics</li>
-                <li>Responsible for carving the strategy for Free-to-Play Ludo game with both IAA and IAP monetisation models</li>
-                <li>Utilise MMP, CRM, Analytics and Data query tools to understand and shape user behaviour, improve funnel</li>
-                <li>Responsible for mapping the competitive landscape and gather intelligence for better strategic decision making</li>
-                <li>Responsible for liaising with relevant stakeholders across Finance, Legal, Tech, Product, Brand, HR and CXOs</li>
+                <li>Manage P&L for PokerCircle and Wowzy with ARR of 250+ Crores, leading a team of 30</li>
+                <li>Drive user growth through acquisition, retention, and reactivation for Poker and Ludo</li>
+                <li>Oversee 200+ Crores marketing budget across performance and brand campaigns</li>
+                <li>Manage channels: SEO, Referrals, Organic, Google, Meta, DSPs, Programmatic, CTV, Partners, Influencers, Affiliates</li>
+                <li>Lead product marketing to enhance Customer Lifetime Value (CLTV) using automation tools</li>
+                <li>Execute business strategies within unit economic guardrails</li>
+                <li>Mentor marketing and analytics teams, fostering innovation</li>
+                <li>Optimize user funnels and costs using data analytics and CLM</li>
+                <li>Prioritize product feature pipelines aligned with business goals</li>
+                <li>Optimize user journeys through experimentation</li>
+                <li>Develop strategy for Free-to-Play Ludo with IAA/IAP monetization</li>
+                <li>Use MMP, CRM, and analytics to shape user behavior</li>
+                <li>Map competitive landscapes for strategic decisions</li>
+                <li>Liaise with Finance, Legal, Tech, Product, Brand, HR, and CXOs</li>
             </ul>
             <h4>Achievements</h4>
             <ul>
-                <li>Launched Wowzy business with strict unit economic guardrails and grew it to over 13M+ installs in 7 months</li>
-                <li>Exceeded Q1’25 revenue expectations by 2X at 1/5th plan CAC (300% quarterly target achievement vs plan)</li>
-                <li>The growth of Wowzy was so unprecedented that we had to upward revise the aggressive annual projection</li>
-                <li>The Poker business grew to an ARR of 70+ Crores in 18 months from launch, doubled to 140+ Crores last year</li>
-                <li>Developed and implemented a strategic framework for cross-category business growth, monetising 6L+ players</li>
-                <li>Beat the industry benchmark for Poker Retention in 6 months from launch at lower than plan retention cost%</li>
-                <li>Beat the ludo NUJ retention target in 3 months from launch and subsequently reduced cost to 50% of plan</li>
-                <li>Demonstrated strategic thinking by optimising Poker Revenue/Deposit ratio-R/D from 50% to 65% in 2 months</li>
-                <li>Optimised the blended CAC for Poker standalone business by 50%+ in 3 months, reducing Break-Even Period</li>
+                <li>Launched Wowzy, achieving 13M+ installs in 7 months</li>
+                <li>Exceeded Q1’25 revenue by 2X at 1/5th planned CAC (300% target achievement)</li>
+                <li>Grew Poker business to 140+ Crores ARR in 18 months</li>
+                <li>Monetized 6L+ players with cross-category growth framework</li>
+                <li>Surpassed Poker retention benchmarks in 6 months at reduced costs</li>
+                <li>Achieved Ludo NUJ retention in 3 months, halving costs</li>
+                <li>Improved Poker Revenue/Deposit ratio from 50% to 65% in 2 months</li>
+                <li>Reduced Poker CAC by 50%+, shortening break-even period</li>
             </ul>
-        </div>
+        </details>
 
-        <div class="experience-item">
-            <h3>Head - User Growth, MEESHO</h3>
-            <p>May’21-Jul’22 | Bangalore</p>
-            <p>Head – User Growth and Acquisition for Meesho Superstore</p>
+        <details class="experience-item">
+            <summary>Head - User Growth<br>Meesho</summary>
+            <p class="date-location">May’21 – Jul’22 | Bangalore</p>
+            <p class="date-location">Head – User Growth and Acquisition for Meesho Superstore</p>
             <h4>Roles & Responsibilities</h4>
             <ul>
-                <li>Responsible for building the Acquisition Team and managing User growth and Revenue for Meesho Superstore</li>
-                <li>Create the team structure for the sales organisation, hired City Heads and Team Leads, grew the sales team</li>
-                <li>Lead a dynamic, diverse and hardworking team of 300+ across multiple cities in Karnataka to lead expansion</li>
-                <li>Developed strategic partnerships to hire, train, enable and manage the operations on-ground at scale</li>
-                <li>Built a high performance team culture through mentoring and innovation for best market positioning</li>
-                <li>Built an agile performance management system that periodically churned poor performers from the team</li>
-                <li>Responsible for planning and executing the GTM strategy for Meesho Superstore across geographies</li>
-                <li>Developed a market where none existed engaging retailers and their customers in long-term partnerships</li>
-                <li>Identified target markets, executed WhatsApp marketing strategy through resellers to acquire customers</li>
-                <li>Managed sales pipeline and revenue forecasts using CRM tools like Leadsquared (similar to Salesforce)</li>
-                <li>Responsible for sales activity and revenue forecasts and successfully hit quarterly revenue expectations</li>
-                <li>Stakeholder management - Coordinate and liaise with stakeholders across Category, Sourcing, TA, HR, Supply Chain, Logistics and Tech/Product to ensure smooth operations in a fast-paced growth environment</li>
-                <li>Responsible for maintaining the RTO from newly acquired champions lower than the 5% benchmark</li>
-                <li>Responsible for enabling revenue generation in ad products within the platform and biddable experience</li>
+                <li>Built Acquisition Team for user growth and revenue</li>
+                <li>Hired City Heads and Team Leads, scaling sales team</li>
+                <li>Led 300+ team members across Karnataka for expansion</li>
+                <li>Developed partnerships for hiring and operations</li>
+                <li>Fostered high-performance culture through mentoring</li>
+                <li>Implemented agile performance management system</li>
+                <li>Executed GTM strategies across geographies</li>
+                <li>Created markets via retailer and customer partnerships</li>
+                <li>Used WhatsApp marketing for customer acquisition</li>
+                <li>Managed sales pipelines with CRM tools like Leadsquared</li>
+                <li>Hit quarterly revenue targets</li>
+                <li>Managed stakeholders across multiple functions</li>
+                <li>Maintained RTO below 5% for new champions</li>
+                <li>Enabled ad product revenue generation</li>
             </ul>
             <h4>Achievements</h4>
             <ul>
-                <li>Expanded from 5 small cities to ~40 cities across Karnataka in a span on 7 months (Jul’21-Jan’22)</li>
-                <li>The field team size for Karnataka grew by 10X in this period which helped us onboard 72% of the target retailer base of the launched cities in Karnataka and convert 63% of these retailers into Meesho Champions</li>
-                <li>65% of all acquired retailers ordered last month and on an average 30% of acquired retailers order in a week</li>
-                <li>The market expansion and rapid buyer growth helped us penetrate to 5.4% of the population of the target markets which translates to roughly 20% household penetration in launched cities of Karnataka region</li>
-                <li>Our daily orders have grown by 20X in this period which is about 5% of households ordering every week</li>
+                <li>Expanded to ~40 cities in Karnataka in 7 months</li>
+                <li>Grew field team 10X, onboarding 72% of target retailers</li>
+                <li>Achieved 65% monthly retailer order rate</li>
+                <li>Penetrated 5.4% of target market population</li>
+                <li>Increased daily orders by 20X</li>
             </ul>
-        </div>
+        </details>
 
-        <div class="experience-item">
-            <h3>Demand Head, UDAAN</h3>
-            <p>Dec’19-Apr’21 | Bangalore</p>
-            <p>Demand Head – General Merchandise Business</p>
+        <details class="experience-item">
+            <summary>Demand Head<br>Udaan</summary>
+            <p class="date-location">Dec’19 – Apr’21 | Bangalore</p>
+            <p class="date-location">Demand Head – General Merchandise Business</p>
             <h4>Roles & Responsibilities</h4>
             <ul>
-                <li>Owned the demand generation for the 200+ Crores General Merchandise category business of Udaan in India</li>
-                <li>Manage the buyer growth roadmap along with wallet share growth through range/cross-selling and ad sales</li>
-                <li>Lead and develop a dynamic, diverse and hardworking team of 180 people across the region including 20 Regional Leads and a team of 7 direct reports - Cluster Market Managers (MBAs from premier institutes)</li>
-                <li>Responsible for managing the budget for user acquisition and buyer growth by optimizing the spend through various modes like Key Value Indicators-KVI pricing, reward coins for dormant buyers, hard verification of KYC</li>
-                <li>Anchored the geo-based pricing construct in conjunction with local supplier onboarding to maximize the revenue by squeezing consumer surplus while staying aggressively competitive on the KVIs for that market</li>
-                <li>Engage the clients partners(retailers) with long-term consultative solutions for predictable revenue forecasts</li>
-                <li>Responsible for scouting and sharing leads with supply team for onboarding local suppliers to reduce supply chain cost and give better pricing to retailers in the state/region through the geo-pricing construct</li>
-                <li>Responsible for controlling and reducing RTO cost to the business by putting structural solves in place</li>
-                <li>Engaging with stakeholders across Category Supply, Finance, Central Demand, Credit, Merchandising & Trade Marketing, Supply Chain, Logistics, HR, Tech, Returns etc. for coordination on common objectives</li>
+                <li>Owned demand for 200+ Crores General Merchandise business</li>
+                <li>Managed buyer growth and wallet share</li>
+                <li>Led 180 team members, including 20 Regional Leads</li>
+                <li>Optimized acquisition budgets with KVI pricing</li>
+                <li>Implemented geo-based pricing for revenue maximization</li>
+                <li>Engaged retailers for predictable revenue forecasts</li>
+                <li>Scouted leads to reduce supply chain costs</li>
+                <li>Reduced RTO costs through structural solutions</li>
+                <li>Coordinated with multiple stakeholder functions</li>
             </ul>
             <h4>Achievements</h4>
             <ul>
-                <li>Successfully merged the metals and non-metals team of West in Jan’20, resulting in 30% cost efficiency and 20% growth in the combined business in Feb’20 itself. This pilot was planned to be expanded across the business and today we only have GM FOSs across the country, resulting in 60% increase in FOS productivity</li>
-                <li>User acquisition and retention programs started in Oct’21 in 5 of my clusters. We grew our buyer base by 7% in test markets whereas in control markets the same number dipped by 5% that month. This program was then scaled up across the country and since then buyer base has grown by 20% despite pin code/hub closures</li>
-                <li>In July-Aug'20 when offline supply chains started opening up our RTO% spiked drastically to upwards of 20% which was unprecedented, we put systemic solves to free up team’s bandwidth, brought down RTO to 6%</li>
-                <li>Have established our private brands and branded exclusive products in my territory, Metal private brands today makes for about 60% of metals GMV whereas exclusive selection in non-metals is 10% of branded</li>
+                <li>Merged teams in Jan’20, achieving 30% cost efficiency</li>
+                <li>Grew buyer base by 7% in test markets, scaling to 20% nationally</li>
+                <li>Reduced RTO from 20% to 6% in July-Aug’20</li>
+                <li>Established private brands, contributing 60% of metals GMV</li>
             </ul>
-        </div>
+        </details>
 
-        <div class="experience-item">
-            <h3>Category Manager, ITC Limited</h3>
-            <p>Nov’18-Dec’19 | Kolkata</p>
-            <p>Category Development Manager - Biscuits</p>
+        <details class="experience-item">
+            <summary>Category Manager<br>ITC Ltd.</summary>
+            <p class="date-location">Nov’18 – Dec’19 | Kolkata</p>
+            <p class="date-location">Category Development Manager - Biscuits</p>
             <h4>Roles & Responsibilities</h4>
             <ul>
-                <li>Pan India profile encompassing elements of strategy and planning to drive Rs 3000 Cr+ ITC biscuits portfolio</li>
-                <li>Crafting strategic business growth plans across regions by studying key category insights from multiple data sources – market intelligence, Nielsen, consumer research, household panel data and brand health metrics</li>
-                <li>Business planning and reviews balancing portfolio imperatives by driving optimal mix, designing incentives for sales teams, monitoring sales and productivity and utilising strategic/tactical interventions like merchandising</li>
-                <li>Strengthening portfolio by planning new launches, test market pilots, launch scheduling, monitoring and evaluating potential for scale up and rapid extension to relevant geographies post proof of concept</li>
-                <li>High levels of engagement with stakeholders across Sales, Marketing, Supply Chain, Finance & Brand teams</li>
-                <li>Managing annual trade spends of Rs 300 Crores+ through planning and deployment of tactical trade/ consumer inputs to grow sales, improve distribution and achieve planned business objectives</li>
-                <li>Sales forecasting, stock planning, monitoring freshness to get desired consumer experience & reduce damage</li>
-                <li>Working with the Foods business division on communication, execution and monitoring of brand plans</li>
+                <li>Managed strategy for 3000 Cr+ biscuits portfolio</li>
+                <li>Developed growth plans using market intelligence</li>
+                <li>Balanced portfolio with sales team incentives</li>
+                <li>Planned new launches and geographic expansions</li>
+                <li>Engaged with Sales, Marketing, and Supply Chain teams</li>
+                <li>Managed 300 Crores+ trade spends</li>
+                <li>Forecasted sales and ensured stock freshness</li>
+                <li>Executed brand plans with Foods division</li>
             </ul>
             <h4>Achievements</h4>
             <ul>
-                <li>Detailed analysis and study of market landscape (market & SKU combinations) indicated an opportunity for deploying consumer promos more effectively, this led to 40% growth in the identified business</li>
-                <li>Bounce Cake was a critical extension to the portfolio. Involved in conceptualizing the test pilot in AP and Orissa, to pan-India expansion. Achieved turnover of Rs 5Cr+ (5% MS) in the 1st month of scale-up</li>
-                <li>Formulated Project Dark, a concerted 360-degree plan to drive distribution & depth of Dark Fantasy Choco Fills (a ten-year-old product) which took the sub-category from 40 Crores to 55 Crores in 6 months, becoming the leader in the premium creams segment with 9.2% Market Share</li>
-                <li>Created strategic local market expansion plans for geographies with Integrated manufacturing and storage facilities to increase demand closer to the source, these plans resulted in over 15% growth in these markets</li>
+                <li>Achieved 40% growth through consumer promos</li>
+                <li>Scaled Bounce Cake to 5 Cr+ turnover in 1 month</li>
+                <li>Grew Dark Fantasy Choco Fills to 55 Crores, leading premium creams</li>
+                <li>Increased demand by 15% in key markets</li>
             </ul>
-        </div>
+        </details>
 
-        <div class="experience-item">
-            <h3>Sales and Marketing Manager, ITC Limited</h3>
-            <p>Apr’16-Oct’18 | Mumbai</p>
-            <p>Assistant Branch Manager- Foods & Beverages</p>
+        <details class="experience-item">
+            <summary>Sales & Marketing Manager<br>ITC Ltd.</summary>
+            <p class="date-location">Apr’16 – Oct’18 | Mumbai</p>
+            <p class="date-location">Assistant Branch Manager - Foods & Beverages</p>
             <h4>Roles & Responsibilities</h4>
             <ul>
-                <li>Managed the trade marketing and distribution of ITC Ltd. Foods division for Greater Mumbai</li>
-                <li>Responsible for managing an annual turnover of Rs 360 Crore+ and distribution budget of Rs 20 Crore+</li>
-                <li>Direct reporting of 30 employees including 5 ASMs, 20 Area Executives and 5 Sales Officers</li>
-                <li>Business spread across 40+ channel partners and 45000+ outlets including GT, KA, E-com and Institutions</li>
-                <li>High level of engagement with stakeholders across Supply chain, Finance, Marketing, HR and Brand Team</li>
-                <li>Responsible for sales & distribution – partner acquisition, market & outlet coverage, dealer representation & profitability, sales forecast, stock management, managing new launches and loyalty program for key outlets</li>
+                <li>Managed trade marketing for Greater Mumbai</li>
+                <li>Handled 360 Crore+ turnover and 20 Crore+ budget</li>
+                <li>Led 30 employees across 45,000+ outlets</li>
+                <li>Oversaw partner acquisition and market coverage</li>
+                <li>Engaged with multiple stakeholder functions</li>
+                <li>Managed new launches and loyalty programs</li>
             </ul>
             <h4>Achievements</h4>
             <ul>
-                <li>Winner of B Natural Sigma FY ’19 with 100% volume growth. Won Confectionery Premier League Jul-Aug’18</li>
-                <li>Managed the Dark Store Pilot, ITC’s first attempt to deliver stocks directly to outlets from ITC warehouse</li>
-                <li>Turned around the foods business from -6% de-growth in Q1’16 to clocking growth of 8% in FY’17 & FY’18</li>
-                <li>Fastest growing branch for Confectionery and Gums, fastest growing branch for Biscuits in West</li>
-                <li>Devised processes to reduce damage stock instances by 0.5% a year translating to cost saving of Rs 1.8Crs</li>
+                <li>Won B Natural Sigma FY’19 with 100% growth</li>
+                <li>Managed ITC’s first Dark Store Pilot</li>
+                <li>Turned around business from -6% to 8% growth</li>
+                <li>Fastest-growing branch for Confectionery and Biscuits</li>
+                <li>Reduced damage stock, saving 1.8 Crores</li>
             </ul>
-        </div>
+        </details>
 
-        <div class="experience-item">
-            <h3>Sales and Marketing Manager, ITC Limited</h3>
-            <p>Mar’14-Mar’16 | Assam & North East</p>
-            <p>Assistant Branch Manager- Foods & Beverages</p>
-            <h4>KRAs</h4>
+        <details class="experience-item">
+            <summary>Sales & Marketing Manager<br>ITC Ltd.</summary>
+            <p class="date-location">Mar’14 – Mar’16 | North East</p>
+            <p class="date-location">Assistant Branch Manager - Foods & Beverages</p>
+            <h4>Key Result Areas</h4>
             <ul>
-                <li>Managed the trade marketing and distribution of ITC Ltd. Food division for Assam & North East</li>
-                <li>Annual turnover of Rs 300 Crore+, direct reporting of 24 employees - 3 ASMs and 21 Area Executives</li>
+                <li>Managed trade marketing for North East</li>
+                <li>Handled 300 Crore+ turnover, leading 24 employees</li>
             </ul>
             <h4>Achievements</h4>
             <ul>
-                <li>Fastest growing branch - 32% growth in FY’16. Rev jump from 16.4 Crs/month to 28 Crs/month in 2yrs</li>
-                <li>In MS(val) BNatural overtook Tropicana in Aug '15, peaking at 29% in Nov’15 with Wtd. Dist. of 67%</li>
-                <li>Mom’s Magic sales crossed 350 MT in Mar’15 grabbing 12.2% of cookies MS(val) in 7 months</li>
-                <li>Bounce MS(val) touched 83% in Assam and 67% in North East in Mid-Price Creams segment</li>
-                <li>Bingo overtook Frito Lays in Bridges MS(val) in FY’14, by Mar’16 we were at 54% MS(val), Lays at 33%</li>
+                <li>Achieved 32% growth in FY’16</li>
+                <li>B Natural overtook Tropicana, peaking at 29% market share</li>
+                <li>Mom’s Magic gained 12.2% cookies market share</li>
+                <li>Bounce achieved 83% market share in Assam</li>
+                <li>Bingo reached 54% market share by Mar’16</li>
             </ul>
-        </div>
+        </details>
 
-        <div class="experience-item">
-            <h3>Management Trainee, ITC Limited</h3>
-            <p>Jun’13-Apr’14 | Saharanpur Branch</p>
-            <p>Assistant Under Training- Area Manager Stint</p>
+        <details class="experience-item">
+            <summary>Management Trainee<br>ITC Ltd.</summary>
+            <p class="date-location">Jun’13 – Apr’14 | Saharanpur</p>
+            <p class="date-location">Assistant Under Training - Area Manager Stint</p>
             <h4>Achievements</h4>
             <ul>
-                <li>Managed Bulandshahr territory independently for 6 months, double hatting as AE and AM</li>
-                <li>The territory grew by 28% in sales value and 43% in productivity (TLC) between Dec’13 and Mar’14</li>
-                <li>Enhanced rural coverage grew the channel by 33%, reduced D&D from 1.3% to 0.99% through stock rotation</li>
+                <li>Managed Bulandshahr, achieving 28% sales growth</li>
+                <li>Increased productivity by 43%</li>
+                <li>Enhanced rural coverage by 33%</li>
             </ul>
-        </div>
+        </details>
 
-        <div class="experience-item">
-            <h3>Sales and Marketing Intern, PepsiCo</h3>
-            <p>Apr’12-Jun’12 | Bangalore</p>
-            <p>Sales and Marketing Intern, Project – Distributor Management</p>
+        <details class="experience-item">
+            <summary>Sales & Marketing Intern<br>PepsiCo</summary>
+            <p class="date-location">Apr’12 – Jun’12 | Bangalore</p>
+            <p class="date-location">Project – Distributor Management</p>
             <h4>Project Details</h4>
             <ul>
-                <li>Offered a PPI for the successful completion of the summers project in due time</li>
-                <li>Worked towards increasing distribution efficiency and arresting attrition of Frito Lays distributors in Metros</li>
-                <li>Recommendations were implemented through modifications to the distributor incentive program called COE</li>
+                <li>Offered PPI for project completion</li>
+                <li>Improved Frito Lays distributor efficiency</li>
+                <li>Implemented COE incentive program</li>
             </ul>
-        </div>
+        </details>
     </section>
 
-    <section id="education">
+    <section id="academic">
         <h2>Academic Profile</h2>
         <ul>
-            <li>MBA, Indian Institute of Management- Kozhikode (2011-13) - 3.23/4.33</li>
-            <li>B.E (Hons.) Mech., Jadavpur University (2007-11) - 8.66/10</li>
+            <li>MBA, Indian Institute of Management, Kozhikode (2011-13) - 3.23/4.33</li>
+            <li>B.E (Hons.) Mechanical, Jadavpur University (2007-11) - 8.66/10</li>
             <li>Class XII, Holy Child School, Jalpaiguri (ICSE Board) (2006-07) - 96.8%</li>
             <li>Class X, Holy Child School, Jalpaiguri (ICSE Board) (2004-05) - 93.6%</li>
         </ul>
     </section>
 
-    <section id="leadership">
-        <h2>Leadership Positions</h2>
-        <ul>
-            <li>IIM-KOZHIKODE: Elected Member, Placements Committee (2011-12)</li>
-            <li>JADAVPUR UNIVERSITY: Placements Coordinator, Mechanical Engineering Department (2010-11)</li>
-        </ul>
-    </section>
-
-    <section id="awards">
-        <h2>Awards & Achievements</h2>
-        <h4>Academic</h4>
-        <ul>
-            <li>Graduated with hons. in the top 10% of Mechanical Engr. Dept., Jadavpur University (2007-11)</li>
-            <li>AIR 242 in West Bengal Joint Entrance Examination (99.78 %tile) among 1,10,000 applicants (2007-08)</li>
-        </ul>
-        <h4>Others</h4>
-        <ul>
-            <li>Secured 2nd position, group dance competition, Footloose 2012, dance extravaganza, IIMK (2012-13)</li>
-        </ul>
-    </section>
+    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
 
     <footer>
-        <p>&copy; 2025 Angshuman Sarkar. All rights reserved.</p>
+        <p>© 2025 Angshuman Sarkar. All rights reserved.</p>
     </footer>
 
 </body>
